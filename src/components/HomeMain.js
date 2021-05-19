@@ -1,5 +1,4 @@
 import React from 'react'
-import homemainImg from "../assets/homemain.svg";
 import { Link } from 'react-router-dom';
 
 // Social
