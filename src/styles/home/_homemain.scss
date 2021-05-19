@@ -2,7 +2,9 @@
     display: flex;
     align-items: center;
     width: 90vw;
-    margin: 100px auto;
+    margin: 50px auto;
+    padding: 50px 0;
+    height: 100%;
 }
 
 .homemain__left {
@@ -61,10 +63,47 @@
     }
 }
 
-.homrmain__right {
+.homemain__right {
     width: 50%;
 
-    img {
-        width: 100%;
+    .homemain__slider {
+        overflow: hidden;
+
+        ul li button {
+            &::before {
+                font-size: 10px;
+                color: rgb(158, 158, 171);
+            }
+        }
+
+        .slick-dots {
+            position: unset;
+
+            li.slick-active button::before {
+                color: #00b318;
+            }
+        }
+
+        .slick-list {
+            overflow: initial;
+        }
+
+        & > button {
+            opacity: 1;
+            height: 100%;
+            width: 5vw;
+            z-index: 1;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
+        }
+
+        img {
+            width: 100%;
+        }
     }
 }
