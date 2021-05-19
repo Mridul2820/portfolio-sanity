@@ -11,6 +11,7 @@ import Projects from './pages/Projects'
 
 // Components
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 const App = () => {
     return (
@@ -39,6 +40,7 @@ const App = () => {
                     component={Projects} 
                 />
             </Switch>
+            <Footer />
         </BrowserRouter>
     )
 }
