@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NavBar = () => {
+const SinglePost = () => {
     return (
         <div>
-            Navbar
+            Single Post
         </div>
     )
 }
 
-export default NavBar
+export default SinglePost
