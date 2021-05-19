@@ -1,9 +1,9 @@
 .hometech {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 90vw;
-
+    margin: 0 auto;
 }
 
 .hometech__left {
@@ -11,5 +11,46 @@
     
     img {
         width: 100%;
+    }
+}
+
+.hometech__right {
+    width: 45%;
+
+    .hometech__text {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #000;
+
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+    .hometech__techs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .hometech__tech {
+            width: 60px;
+            height: 70px;
+            margin-right: 20px;
+            margin-top: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                width: 80%;
+            }
+
+            p {
+                font-size: 12px;
+                margin: 5px 0;
+            }
+        }
     }
 }
