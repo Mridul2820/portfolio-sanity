@@ -10,17 +10,34 @@ import SinglePost from './pages/SinglePost'
 import Projects from './pages/Projects'
 
 // Components
-
+import NavBar from './components/NavBar'
 
 const App = () => {
     return (
         <BrowserRouter>
+            <NavBar />
             <Switch>
-                <Route path="/" component={Home} exact />
-                <Route path="/about" component={About} />
-                <Route path="/post/:slug" component={SinglePost} />
-                <Route path="/post" component={Posts} />
-                <Route path="/porjects" component={Projects} />
+                <Route 
+                    path="/" 
+                    component={Home} 
+                    exact 
+                />
+                <Route 
+                    path="/about" 
+                    component={About} 
+                />
+                <Route 
+                    path="/blog/:slug" 
+                    component={SinglePost} 
+                />
+                <Route 
+                    path="/blog" 
+                    component={Posts} 
+                />
+                <Route 
+                    path="/projects" 
+                    component={Projects} 
+                />
             </Switch>
         </BrowserRouter>
     )

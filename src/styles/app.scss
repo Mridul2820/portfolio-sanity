@@ -1,6 +1,9 @@
 @import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
 @import url("https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 * {
     margin: 0;
@@ -30,3 +33,5 @@ body {
 .home-name {
     font-size: 150px;
 }
+
+@import './navbar';
