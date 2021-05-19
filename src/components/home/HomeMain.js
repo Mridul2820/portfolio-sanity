@@ -1,22 +1,22 @@
 import React from 'react'
 
 // Social
-import facebookImg from "../assets/social/facebook.svg";
-import instagramImg from "../assets/social/instagram.svg";
-import twitterImg from "../assets/social/twitter.svg";
-import githubImg from "../assets/social/github.svg";
+import facebookImg from "../../assets/social/facebook.svg";
+import instagramImg from "../../assets/social/instagram.svg";
+import twitterImg from "../../assets/social/twitter.svg";
+import githubImg from "../../assets/social/github.svg";
 
 // Carousel
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import slide1 from "../assets/slide/airbnb-clone.png";
-import slide2 from "../assets/slide/disney-plus-clone.png";
-import slide3 from "../assets/slide/netflix-build.png";
-import slide4 from "../assets/slide/music-player.png";
-import slide5 from "../assets/slide/restaurant-site.png";
-import slide6 from "../assets/slide/google-clone.png";
+import slide1 from "../../assets/slide/airbnb-clone.png";
+import slide2 from "../../assets/slide/disney-plus-clone.png";
+import slide3 from "../../assets/slide/netflix-build.png";
+import slide4 from "../../assets/slide/music-player.png";
+import slide5 from "../../assets/slide/restaurant-site.png";
+import slide6 from "../../assets/slide/google-clone.png";
 
 const HomeMain = () => {
 

@@ -1,10 +1,12 @@
 import React from 'react'
-import HomeMain from '../components/HomeMain'
+import HomeMain from '../components/home/HomeMain'
+import HomeTech from '../components/home/HomeTech'
 
 const Home = () => {
     return (
         <div>
             <HomeMain />
+            <HomeTech />
         </div>
     )
 }
