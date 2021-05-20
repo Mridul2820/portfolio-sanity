@@ -7,7 +7,7 @@ import HomeSlider from './HomeSlider';
 
 const HomeMain = () => {
     return (
-        <div className="homemain">
+        <main className="homemain">
             <div className="homemain__left">
                 <div className="homemain__textbox">
                     <h2>Hi, I'm Mridul</h2>
@@ -31,7 +31,7 @@ const HomeMain = () => {
                 <HomeSlider />
                 <h3>Some of My recent Projects</h3>
             </div>
-        </div>
+        </main>
     )
 }
 

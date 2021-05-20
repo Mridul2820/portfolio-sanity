@@ -30,8 +30,11 @@ ul {
 @import './footer';
 @import './social';
 
-// home
+// Home
 @import './home/homemain';
 @import './home/hometech';
 @import './home/homeslider';
 @import './home/homecontact';
+
+// Posts
+@import './posts';
