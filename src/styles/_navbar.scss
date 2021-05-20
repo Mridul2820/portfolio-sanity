@@ -23,6 +23,10 @@
         height: 100%;
         width: 90vw;
         max-width: 1170px;
+
+        @media (max-width: 500px) {
+            width: 95vw;
+        }
     }
 }
 
@@ -56,6 +60,10 @@
         text-transform: uppercase;
         font-weight: 500;
         transition: 0.2s ease-in-out;
+
+        @media (max-width: 500px) {
+            padding: 4px 8px;
+        }
 
         &:hover {
             background-color: #023047;

@@ -4,10 +4,29 @@
     align-items: center;
     width: 90vw;
     margin: 0 auto;
+
+    @media (max-width: 992px) {
+        width: 95vw;
+    }
+
+    @media (max-width: 840px) {
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
 }
 
 .hometech__left {
-    width: 50%;
+    width: 45%;
+
+    @media (max-width: 840px) {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;
+        padding: 0 10px;
+    }
     
     img {
         width: 100%;
@@ -15,7 +34,17 @@
 }
 
 .hometech__right {
-    width: 45%;
+    width: 55%;
+
+    @media (max-width: 840px) {
+        width: 90%;
+        text-align: center;
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;
+        padding: 0 10px;
+    }
 
     .hometech__text {
         padding-bottom: 10px;
@@ -24,6 +53,16 @@
 
         h2 {
             font-size: 3rem;
+
+            @media (max-width: 500px) {
+                font-size: 2.2rem;
+            }
+        }
+
+        h3 {
+            @media (max-width: 500px) {
+                font-size: 1rem;
+            }
         }
     }
 
