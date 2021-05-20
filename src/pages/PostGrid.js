@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import sanityClient from '../client'
+import sanityClient from '../client.js'
 import Post from '../components/Post'
 
 const PostGrid = () => {
@@ -7,11 +7,11 @@ const PostGrid = () => {
 
     useEffect(() => {
         sanityClient
-            .fetch(`*[_type = "post"]{
+            .fetch(`*[_type == "post"]{
                 title,
                 slug,
-                date,
-                description,
+                publishedAt,
+                body,
                 mainImage{
                     asset->{
                         _id,
@@ -35,7 +35,7 @@ const PostGrid = () => {
                 <div className="posts__grid">
                 {postData &&
                     postData.map((post) => (
-                        <Post post={post} />
+                        <Post key={post.slug.current} post={post}/>
                     ))
                 }
                 </div>

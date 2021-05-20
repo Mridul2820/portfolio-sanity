@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Post = ({ post }) => {
     return (
-        <article key={post.slug.current} >
+        <article className="post" >
             <Link to={"/post/" + post.slug.current}  >
                 <div className="post__image">
                     <img
@@ -16,11 +16,11 @@ const Post = ({ post }) => {
                         {post.title}
                     </h3>
                     <span className="post__date">
-                        {post.date}
+                        {post.publishedAt}
                     </span>
-                    <p className="post__desc">
-                        {post.description}
-                    </p>
+                    {/* <p className="post__desc">
+                        {post.body}
+                    </p> */}
                 </div>
             </Link>
         </article>
