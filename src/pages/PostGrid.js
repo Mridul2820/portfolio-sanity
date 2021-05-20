@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import sanityClient from '../client'
+import Post from '../components/Post'
 
-const Posts = () => {
+const PostGrid = () => {
     const [postData, setPostData] = useState(null)
 
     useEffect(() => {
@@ -10,6 +10,8 @@ const Posts = () => {
             .fetch(`*[_type = "post"]{
                 title,
                 slug,
+                date,
+                description,
                 mainImage{
                     asset->{
                         _id,
@@ -30,27 +32,16 @@ const Posts = () => {
                     <p>Welcome to my blog posts page!</p>
                 </div>
                 
-                <div className="posts__articles">
-                    <article>
-                        <Link to={"/post/" + post.slug.current} key={post.slug.current}>
-                            <span className="">
-                                <img
-                                    src=""
-                                    alt=""
-                                    className=""
-                                />
-                                <span className="">
-                                    <h3 className="">
-                                        {}
-                                    </h3>
-                                </span>
-                            </span>
-                        </Link>
-                    </article>
+                <div className="posts__grid">
+                {postData &&
+                    postData.map((post) => (
+                        <Post post={post} />
+                    ))
+                }
                 </div>
             </section>
         </main>
     )
 }
 
-export default Posts
+export default PostGrid

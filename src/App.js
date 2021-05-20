@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 // Pages 
 import About from './pages/About'
 import Home from './pages/Home'
-import Posts from './pages/Posts'
+import PostGrid from './pages/PostGrid'
 import SinglePost from './pages/SinglePost'
 import Projects from './pages/Projects'
 
@@ -33,7 +33,7 @@ const App = () => {
                 />
                 <Route 
                     path="/blog" 
-                    component={Posts} 
+                    component={PostGrid} 
                 />
                 <Route 
                     path="/projects" 
