@@ -1,11 +1,5 @@
 import React from 'react'
 
-// Social
-import facebookImg from "../../assets/social/facebook.svg";
-import instagramImg from "../../assets/social/instagram.svg";
-import twitterImg from "../../assets/social/twitter.svg";
-import githubImg from "../../assets/social/github.svg";
-
 // Carousel
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -17,6 +11,7 @@ import slide3 from "../../assets/slide/netflix-build.png";
 import slide4 from "../../assets/slide/music-player.png";
 import slide5 from "../../assets/slide/restaurant-site.png";
 import slide6 from "../../assets/slide/google-clone.png";
+import SocialLinks from '../SocialLinks';
 
 const HomeMain = () => {
 
@@ -37,48 +32,7 @@ const HomeMain = () => {
                     <h3>A Passionate Web Developer </h3>
                     <p>building Websites with HTML, CSS, JavaScript & REACT and some cool libraries and frameworks.</p>
                 </div>
-                <div className="homemain__social">
-                    <a 
-                        target="_blank" 
-                        rel="noreferrer" 
-                        href="https://github.com/Mridul2820"
-                    >
-                        <img 
-                            src={githubImg} 
-                            alt="Github Mridul"
-                        />
-                    </a>
-                    <a 
-                        target="_blank"  
-                        rel="noreferrer" 
-                        href="https://www.facebook.com/mridul.panda.754"
-                    >
-                        <img 
-                            src={facebookImg} 
-                            alt="Instagram Mridul"
-                        />
-                    </a>
-                    <a 
-                        target="_blank"  
-                        rel="noreferrer" 
-                        href="https://www.instagram.com/i_mridul/"
-                    >
-                        <img 
-                            src={instagramImg} 
-                            alt="Instagram Mridul"
-                        />
-                    </a>
-                    <a 
-                        target="_blank"  
-                        rel="noreferrer" 
-                        href="https://twitter.com/i_mridul"
-                    >
-                        <img 
-                            src={twitterImg} 
-                            alt="Twitter Mridul"
-                        />
-                    </a>
-                </div>
+                <SocialLinks />
             </div>
             <div className="homemain__right">
                 <Slider {...settings} className="homemain__slider">
