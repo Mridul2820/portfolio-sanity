@@ -22,9 +22,9 @@ const HomeTech = () => {
             <div className="hometech__right">
                 <div className="hometech__text">
                     <h2>What I do</h2>
-                    <h3>Crazy Web Devloper Who Wants To make Crazy Websites</h3>
+                    <p>Crazy Web Devloper Who Wants To make Crazy Websites</p>
                 </div>
-                <h4>What Tech I Use</h4>
+                <h4>Skills</h4>
                 <div className="hometech__techs">
                     <div className="hometech__tech">
                         <img src={html} alt="html" />
