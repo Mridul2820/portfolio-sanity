@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import sanityClient from '../client.js'
-import Post from '../components/Post'
+import Post from '../components/postgrid/Post'
 
 const PostGrid = () => {
     const [postData, setPostData] = useState(null)

@@ -1,0 +1,82 @@
+.projectsheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    background-color: #99ffb4;
+}
+
+.projectsheader__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    width: 90vw;
+    max-width: 1000px;
+
+    .projectsheader__img {
+        width: 200px;
+
+        @media only screen and (max-width: 640px){
+            width: 150px;
+        }
+
+        @media only screen and (max-width: 560px){
+            width: 140px;
+        }
+
+        @media only screen and (max-width: 480px){
+            width: 100px;
+        }
+
+        @media only screen and (max-width: 352px){
+            width: 80px;
+        }
+
+        &.img-right {
+            justify-self: end;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .projectsheader__title {
+        text-align: center;
+
+        .title {
+            padding: .5rem 0;
+
+            @media only screen and (max-width: 640px){
+                font-size: 25px;
+            }
+
+            @media only screen and (max-width: 480px){
+                font-size: 20px;
+            }
+
+            @media only screen and (max-width: 352px){
+                font-size: 16px;
+            }
+        }
+
+        .underline {
+            width: 6rem;
+            height: .25rem;
+            background: #c50404;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media only screen and (max-width: 352px){
+                width: 4rem;
+            }
+        }  
+        
+        .project-number {
+            margin-top: 5px;
+        }
+    }
+
+}
+
