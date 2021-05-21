@@ -14,9 +14,12 @@ export default {
             type: 'datetime',
         },
         {
-            name: 'screenshot',
-            title: 'Screenshot',
-            type: 'image'
+            name: 'projectImage',
+            title: 'Project image',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
         },
         {
             name: "description",

@@ -1,15 +1,19 @@
 import React from 'react'
 import github from '../../assets/social/github.svg'
 
-const ProjectsSingle = ({ project }) => {
+const ProjectsSingle = ({ project, setSelectedModal }) => {
     return (
         <article className="projectsingle">
             <h1 className="project-title" >{project.title}</h1>
 
             <div className="project-image">
                 <img 
-                    src={project.screenshot} 
+                    src={project.projectImage.asset.url} 
                     alt={project.title} 
+
+                    onClick={() => {
+                        setSelectedModal(project.projectImage.asset.url)
+                    }}
                 />
             </div>
 
@@ -27,7 +31,7 @@ const ProjectsSingle = ({ project }) => {
                         Netlify
                     </a>
                 }
-                {project.vercel && 
+                {project.varcel && 
                     <a target='_blank' rel="noreferrer" href={project.varcel} >
                         Vercel
                     </a>

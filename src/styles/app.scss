@@ -26,6 +26,10 @@ ul {
     list-style: none
 }
 
+// body.modal-open {
+//     overflow: hidden;
+// }
+
 @import './navbar';
 @import './footer';
 @import './social';
@@ -45,3 +49,4 @@ ul {
 @import './projects/projects';
 @import './projects/projectsheader';
 @import './projects/projectsingle';
+@import './projects/projectsmodal';

@@ -12,10 +12,11 @@ const ProjectsHeader = ({ projectData }) => {
                 <div className="projectsheader__title">
                     <h1 className="title">List of the Projects</h1>
                     <div className="underline"></div>
-                    <h5 className="project-number">
-                        Total Projects : 
-                        {/* {projectData.length} */}
-                    </h5>
+                    {projectData && 
+                        <h5 className="project-number">
+                            Total Projects :  {projectData.length}
+                        </h5>
+                    }
                 </div>
                 <div className="projectsheader__img img-right">
                     <img src={imgSection} alt="section"/>

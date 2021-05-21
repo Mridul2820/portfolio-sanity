@@ -16,7 +16,7 @@ const Post = ({ post }) => {
                         {post.title}
                     </h3>
                     <span className="post__date">
-                        {post.publishedAt}
+                        {new Date(post.publishedAt).toDateString()}
                     </span>
                     {/* <p className="post__desc">
                         {post.body}
