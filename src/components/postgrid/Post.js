@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Post = ({ post }) => {
     return (
         <StyledPost>
-            <Link to={"/post/" + post.slug.current}  >
+            <Link to={"/post/" + post.slug.current} key={post.slug.current} >
                 <StyledImg>
                     <img
                         src={post.mainImage.asset.url}

@@ -59,7 +59,7 @@ const StyledMain = styled.main`
     }
 `
 
-const StyledHeader = styled.main`
+const StyledHeader = styled.div`
     text-align: center;
 
     h1 {
@@ -76,7 +76,7 @@ const StyledHeader = styled.main`
     }
 `
 
-const StyledGrid = styled.main`
+const StyledGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
