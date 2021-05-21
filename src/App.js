@@ -1,5 +1,4 @@
 import React from 'react'
-import './styles/app.scss'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 // Pages 
