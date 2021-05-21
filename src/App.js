@@ -12,10 +12,12 @@ import Projects from './pages/Projects'
 // Components
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
+import GlobalStyle from './components/GlobalStyles'
 
 const App = () => {
     return (
         <BrowserRouter>
+            <GlobalStyle />
             <NavBar />
             <Switch>
                 <Route 
