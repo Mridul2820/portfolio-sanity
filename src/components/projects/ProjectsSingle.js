@@ -48,13 +48,12 @@ const StyledArticle = styled.article`
     background-color: #eee;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
     transition: 0.25s ease;
     // width: 300px;
 
     &:hover {
-        transform: scale(1.02);
-        box-shadow: 0 2px 20px rgba(0, 0, 0, .5);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, .6);
     }
 `
 
@@ -63,7 +62,7 @@ const StyledImg = styled.div`
     overflow: hidden;
 
     img {
-    width: 100%;
+        width: 100%;
         object-fit: cover;
         vertical-align: bottom;
     }

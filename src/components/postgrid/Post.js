@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const Post = ({ post }) => {
+const Post = ({ post, index }) => {
     return (
         <StyledPost>
-            <Link to={"/post/" + post.slug.current} key={post.slug.current} >
+            <Link to={"/blog/" + post.slug.current} key={post.slug.current} >
+                <span key={index}>
                 <StyledImg>
                     <img
                         src={post.mainImage.asset.url}
@@ -23,6 +24,7 @@ const Post = ({ post }) => {
                         {post.body}
                     </p> */}
                 </StyledText>
+                </span>
             </Link>
         </StyledPost>
     )

@@ -35,8 +35,8 @@ const PostGrid = () => {
                 
                 <StyledGrid>
                 {postData &&
-                    postData.map((post) => (
-                        <Post key={post.slug.current} post={post}/>
+                    postData.map((post, index) => (
+                        <Post key={post.slug.current} post={post} index={index}/>
                     ))
                 }
                 </StyledGrid>
