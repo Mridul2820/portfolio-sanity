@@ -1,11 +1,10 @@
-
-import React from 'react'
+import styled from 'styled-components';
 
 const Footer = () => {
     const year = new Date().getFullYear()
 
     return (
-        <div className="footer">
+        <StyledFooter>
             <p>
                 Copyright &copy; {year} by 
                 <a 
@@ -16,8 +15,23 @@ const Footer = () => {
                 </a> 
                 . All Rights Reserved. 
             </p>
-        </div>
+        </StyledFooter>
     )
 }
+
+const StyledFooter = styled.div`
+    padding: 12px 0;
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+    border-top: 1px solid #ccc;
+    height: 45px;
+    background-color: #f0fff4;
+
+    a {
+        margin-left: 5px;
+        color: #333;
+    }
+`
 
 export default Footer
