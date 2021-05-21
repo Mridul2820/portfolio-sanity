@@ -1,7 +1,11 @@
+.projects {
+    min-height: 85vh;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem 2rem;
+    gap: 3rem;
     padding: 30px 100px 80px 100px;
     background-color: #f0fff4;
 

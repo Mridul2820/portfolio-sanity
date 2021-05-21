@@ -30,6 +30,8 @@ const Projects = () => {
         .catch(console.error);
     }, [])
 
+    console.log(projectData);
+
     return (
         <main className="projects">
             <section>

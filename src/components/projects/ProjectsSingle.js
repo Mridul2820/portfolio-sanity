@@ -4,8 +4,6 @@ import github from '../../assets/social/github.svg'
 const ProjectsSingle = ({ project, setSelectedModal }) => {
     return (
         <article className="projectsingle">
-            <h1 className="project-title" >{project.title}</h1>
-
             <div className="project-image">
                 <img 
                     src={project.projectImage.asset.url} 
@@ -16,26 +14,31 @@ const ProjectsSingle = ({ project, setSelectedModal }) => {
                     }}
                 />
             </div>
-
-            <div className="project-repo">
-                <a target='_blank' rel="noreferrer" href={project.githubRepo} className="repo">
-                    <img src={github} alt={project.title}/>
-                    <p>Github</p>
-                </a>
-            </div>
-
-
-            <div className="deploy">
-                {project.netlify && 
-                    <a target='_blank' rel="noreferrer" href={project.netlify} >
-                        Netlify
-                    </a>
+            <div className="project-body">
+                <div className="tags">
+                {project.tags && 
+                    project.tags.map((tag, index) => (
+                        <span className="tag" key={index} >{tag}</span>
+                    ))
                 }
-                {project.varcel && 
-                    <a target='_blank' rel="noreferrer" href={project.varcel} >
-                        Vercel
+                </div>
+
+                <h1 className="project-title" >{project.title}</h1>
+
+                <div className="links">
+                    {project.varcel && 
+                        <a target='_blank' rel="noreferrer" href={project.varcel} className="varcel" >
+                            View Demo
+                        </a>
+                    }
+
+                    <a target='_blank' rel="noreferrer" href={project.githubRepo} className="repo">
+                        <img src={github} alt={project.title}/>
+                        <p>Github</p>
                     </a>
-                }
+                </div>
+
+
             </div>
         </article>
     )
