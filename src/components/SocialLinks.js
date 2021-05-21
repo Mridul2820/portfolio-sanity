@@ -1,4 +1,4 @@
-import React from 'react'
+import styled from 'styled-components'
 
 // Social
 import facebookImg from "../assets/social/facebook.svg";
@@ -8,7 +8,7 @@ import githubImg from "../assets/social/github.svg";
 
 const SocialLinks = () => {
     return (
-        <div className="social">
+        <StyledSocial>
             <a 
                 target="_blank" 
                 rel="noreferrer" 
@@ -49,8 +49,47 @@ const SocialLinks = () => {
                     alt="Twitter Mridul"
                 />
             </a>
-        </div>
+        </StyledSocial>
     )
 }
+
+const StyledSocial = styled.div`
+    display: flex;
+    margin-top: 50px;
+
+    @media (max-width: 840px) {
+        margin-top: 20px;
+    }
+
+    a {
+        background-color: #f0f0f0;
+        border: 1px solid #888;
+        margin-right: 15px;
+        padding: 5px;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .5s;
+
+        &:hover {
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+            background-color: #fff;
+        }
+    }
+
+    img {
+        width: 30px;
+        opacity: .9;
+        transition: .5s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+`
 
 export default SocialLinks
