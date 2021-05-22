@@ -38,6 +38,11 @@ const StyledContainer = styled.div`
         flex-direction: column;
         min-height: 100%;
     }
+
+    @media (max-width: 400px) {
+        padding-top: 10px;
+        margin-top: 30px;
+    }
 `
 
 const StyledLeft = styled.div`
@@ -64,7 +69,6 @@ const StyledRight = styled.div`
 
     @media (max-width: 840px) {
         width: 80%;
-        margin-bottom: 60px;
     }
 
     @media (max-width: 500px) {
@@ -80,6 +84,16 @@ const StyledText = styled.div`
     h2 {
         font-size: 2.5rem;
         margin-bottom: 20px;
+
+        @media (max-width: 400px) {
+            font-size: 2.2rem;
+        }
+    }
+
+    p {
+        @media (max-width: 400px) {
+            font-size: 14px;
+        }
     }
 
     h3 {

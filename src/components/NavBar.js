@@ -74,6 +74,10 @@ const StyledNavbar = styled.div`
     z-index: 100;
     transition: 0.6s ease-in-out;
 
+    @media (max-width: 400px) {
+        height: 3rem;
+    }
+
     &.active{
         box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.157);
     }
@@ -100,11 +104,19 @@ const StyledLogo = styled.div`
     
         img {
             width: 26px;
+
+            @media (max-width: 400px) {
+                width: 22px;
+            }
         }
     
         h2 {
             font-size: 1.2rem;
             font-weight: bold;
+
+            @media (max-width: 400px) {
+                font-size: 1.1rem;
+            }
         }
     }
 `
@@ -125,6 +137,13 @@ const StyledNavLinks = styled.div`
 
         @media (max-width: 500px) {
             padding: 4px 8px;
+        }
+
+        @media (max-width: 400px) {
+            padding: 3px 6px;
+            font-size: 1rem;
+            margin-left: 5px;
+            margin-right: 0;
         }
 
         &:hover {

@@ -155,6 +155,7 @@ const StyledTechs = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 5px;
 `
 
 const StyledTech = styled.div`
@@ -170,12 +171,21 @@ const StyledTech = styled.div`
     justify-content: space-around;
     align-items: center;
 
+    @media (max-width: 400px) {
+        height: 65px;
+        width: 80px;
+    }
+
     &:hover {
         box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
     }
 
     img {
         width: 80%;
+
+        @media (max-width: 400px) {
+            width: 65%;
+        }
     }
 
     p {

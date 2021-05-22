@@ -8,7 +8,7 @@ import githubImg from "../assets/social/github.svg";
 
 const SocialLinks = () => {
     return (
-        <StyledSocial>
+        <StyledSocial className="social">
             <a 
                 target="_blank" 
                 rel="noreferrer" 
@@ -75,6 +75,11 @@ const StyledSocial = styled.div`
         align-items: center;
         transition: .5s;
 
+        @media (max-width: 400px) {
+            height: 42px;
+            width: 42px;
+        }
+
         &:hover {
             box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
             background-color: #fff;
@@ -85,6 +90,10 @@ const StyledSocial = styled.div`
         width: 30px;
         opacity: .9;
         transition: .5s;
+
+        @media (max-width: 400px) {
+            width: 25px;
+        }
 
         &:hover {
             opacity: 1;

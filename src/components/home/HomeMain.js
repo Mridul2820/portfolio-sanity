@@ -80,6 +80,10 @@ const StyledTextbox = styled.div`
         @media (max-width: 500px) {
             font-size: 2.5rem;
         }
+
+        @media (max-width: 400px) {
+            font-size: 2.2rem;
+        }
     }
 
     h3 {
@@ -89,6 +93,10 @@ const StyledTextbox = styled.div`
         @media (max-width: 500px) {
             font-size: 1.2rem;
         }
+
+        @media (max-width: 400px) {
+            font-size: 1rem;
+        }
     }
 
     p {
@@ -96,6 +104,10 @@ const StyledTextbox = styled.div`
 
         @media (max-width: 500px) {
             font-size: 1rem;
+        }
+
+        @media (max-width: 400px) {
+            font-size: .8rem;
         }
     }
 `
@@ -117,6 +129,12 @@ const StyledButtons = styled.div`
         box-shadow: 3px 6px 20px rgba(64, 149, 198, 0.336);
         border-radius: 5px;
         color:#ffffff;
+
+        @media (max-width: 400px) {
+            font-size: .9rem;
+            margin-right: 12px;
+            padding: 6px 12px;
+        }
     
         &:hover{
             background-color: transparent;
