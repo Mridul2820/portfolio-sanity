@@ -8,6 +8,10 @@ import sanityClient from '../client';
 import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from "@sanity/block-content-to-react";
 
+import { TwitterTweetEmbed } from 'react-twitter-embed';
+
+// import { TwitterTweetEmbed } from 'react-twitter-embed';
+
 const builder = imageUrlBuilder(sanityClient);
 const urlFor = source => {
     return builder.image(source);
@@ -31,7 +35,7 @@ const SinglePost = () => {
                             url
                         }
                     },
-                    body,
+                    bodyPortableText,
                     "name": author->name,
                     "authorImage": author->image
                 }`
@@ -43,6 +47,28 @@ const SinglePost = () => {
     if (!singlePost) return <Skeleton />
 
     console.log(singlePost);
+
+    const serializers = {
+        types: {
+            youtube: (props) => (
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src={`https://www.youtube.com/embed/${props.node.id}`}
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen >
+                </iframe>
+            ),
+            twitter: (props) => (
+                <TwitterTweetEmbed 
+                    tweetId={props.node.id} 
+                    options={{ conversation: "none" }} 
+                />
+            ),
+        },
+      }
 
     return (
         <StyledMain>
@@ -68,7 +94,8 @@ const SinglePost = () => {
                     
                 <StyledContent>
                     <BlockContent
-                        blocks={singlePost.body}
+                        blocks={singlePost.bodyPortableText}
+                        serializers={serializers}
                         projectId= "k7hjtaca"
                         dataset= "production"
                     />
