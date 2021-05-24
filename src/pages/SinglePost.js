@@ -10,8 +10,6 @@ import BlockContent from "@sanity/block-content-to-react";
 
 import { TwitterTweetEmbed } from 'react-twitter-embed';
 
-// import { TwitterTweetEmbed } from 'react-twitter-embed';
-
 const builder = imageUrlBuilder(sanityClient);
 const urlFor = source => {
     return builder.image(source);
@@ -35,7 +33,7 @@ const SinglePost = () => {
                             url
                         }
                     },
-                    bodyPortableText,
+                    body,
                     "name": author->name,
                     "authorImage": author->image
                 }`
@@ -49,6 +47,14 @@ const SinglePost = () => {
     console.log(singlePost);
 
     const serializers = {
+        marks: {
+            link: ({mark, children}) => {
+                const { blank, href } = mark
+                return blank 
+                    ? <a href={href} target="_blank" rel="noreferrer">{children}</a>
+                    : <a href={href}>{children}</a>
+            }
+        },
         types: {
             youtube: (props) => (
                 <iframe 
@@ -94,7 +100,7 @@ const SinglePost = () => {
                     
                 <StyledContent>
                     <BlockContent
-                        blocks={singlePost.bodyPortableText}
+                        blocks={singlePost.body}
                         serializers={serializers}
                         projectId= "k7hjtaca"
                         dataset= "production"

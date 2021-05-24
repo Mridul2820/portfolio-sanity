@@ -43,26 +43,9 @@ export default {
       type: 'datetime',
     },
     {
-      name: 'bodyPortableText',
-      type: 'array',
-      title: 'Body',
-      of: [
-        {
-          type: 'image'
-        },
-        {
-          type: 'block'
-        },
-        {
-          type: 'twitter'
-        },
-        {
-          type: 'instagram'
-        },
-        {
-          type: 'youtube'
-        }
-      ]
+      name: 'body',
+      type: 'blockContent',
+      title: 'Body'
     }
   ],
 

@@ -49,6 +49,11 @@ export default {
                 name: 'href',
                 type: 'url',
               },
+              {
+                title: 'Open in new tab',
+                name: 'blank',
+                type: 'boolean'
+              }
             ],
           },
         ],
@@ -61,5 +66,17 @@ export default {
       type: 'image',
       options: {hotspot: true},
     },
+    {
+      type: 'twitter',
+      options: {hotspot: true},
+    },
+    {
+      type: 'instagram',
+      options: {hotspot: true},
+    },
+    {
+      type: 'youtube',
+      options: {hotspot: true},
+    }
   ],
 }
