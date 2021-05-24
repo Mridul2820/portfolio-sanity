@@ -1,1 +1,3 @@
-This is a Portfolio with React JS and Sanity CMS
+# Portfolio With React & Sanity
+
+### This is a the Portfolio of [Mridul](https://github.com/Mridul2820) made with [React JS](https://reactjs.org/) and [Sanity CMS](https://www.sanity.io/)
