@@ -33,7 +33,16 @@ const SinglePost = () => {
                             url
                         }
                     },
-                    body,
+                    body[]{
+                        ...,
+                        markDefs[]{
+                            ...,
+                            _type == "internalLink" => {
+                                "slug": @.reference->slug,
+                                "title": @.reference->title,
+                            }
+                        }
+                    },
                     "name": author->name,
                     "authorImage": author->image
                 }`
@@ -42,12 +51,18 @@ const SinglePost = () => {
             .catch(console.error);
     }, [slug]);
 
-    if (!singlePost) return <Skeleton />
-
     console.log(singlePost);
+
+    if (!singlePost) return <Skeleton />
 
     const serializers = {
         marks: {
+            internalLink: ({mark}) => {
+                const {slug = {}} = mark
+                const {title = {}} = mark
+                const href = `/blog/${slug.current}`
+                return <a href={href}>{title}</a>
+            },
             link: ({mark, children}) => {
                 const { blank, href } = mark
                 return blank 
