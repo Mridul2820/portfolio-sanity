@@ -9,6 +9,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from "@sanity/block-content-to-react";
 
 import { TwitterTweetEmbed } from 'react-twitter-embed';
+import InstagramEmbed from 'react-instagram-embed';
 
 const builder = imageUrlBuilder(sanityClient);
 const urlFor = source => {
@@ -86,6 +87,12 @@ const SinglePost = () => {
                 <TwitterTweetEmbed 
                     tweetId={props.node.id} 
                     options={{ conversation: "none" }} 
+                />
+            ),
+            instagram: (props) => (
+                <InstagramEmbed
+                    url={`https://instagr.am/p/${props.node.id}/`} 
+                    clientAccessToken={`${process.env.REACT_APP_FB_APP_ID}|${process.env.REACT_APP_ACCESS_TOCKEN}`}
                 />
             ),
         },

@@ -1,7 +1,7 @@
 import React from 'react'
 import InstagramEmbed from 'react-instagram-embed';
 
-const Preview = ({value}) => {
+const Preview = ({ value }) => {
     const { id } = value
 
     if(!id) {
@@ -10,7 +10,8 @@ const Preview = ({value}) => {
 
     return (
         <InstagramEmbed 
-            url={`https://www.instagram.com/p/${id}/`} 
+            url={`https://instagr.am/p/${id}/`} 
+            clientAccessToken={`${process.env.REACT_APP_FB_APP_ID}|${process.env.REACT_APP_ACCESS_TOCKEN}`}
         />
     )
 }
